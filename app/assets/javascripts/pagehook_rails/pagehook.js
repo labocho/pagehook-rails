@@ -82,5 +82,3 @@
   this.Pagehook.handler = this.Pagehook.instance.handler;
 
 }).call(this);
-
-//# sourceMappingURL=pagehook.js.map
