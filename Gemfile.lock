@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pagehook-rails (0.0.2)
+    pagehook-rails (0.0.3)
       rails (>= 3.1)
 
 GEM
@@ -102,7 +102,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.39)
+    tzinfo (0.3.41)
 
 PLATFORMS
   ruby
