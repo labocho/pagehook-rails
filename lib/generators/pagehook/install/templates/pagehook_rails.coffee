@@ -1,5 +1,7 @@
 #= require pagehook_rails/pagehook
 # Register event handler
-document.addEventListener("DOMContentLoaded", Pagehook.handler)
-unless typeof(Turbolinks) == "undefined"
+if typeof(Turbolinks) == "undefined"
+  document.addEventListener("DOMContentLoaded", Pagehook.handler)
+else
+  document.addEventListener("turbolinks:load", Pagehook.handler)
   document.addEventListener("page:load", Pagehook.handler)
