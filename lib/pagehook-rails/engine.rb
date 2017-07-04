@@ -4,7 +4,7 @@ module PagehookRails
 
     initializer "pagehook-rails.action_controller" do |app|
       ActiveSupport.on_load :action_controller do
-        helper PagehookRails::PagehookHelper
+        ActionController::Base.include PagehookRails::PagehookHelper
       end
     end
   end
