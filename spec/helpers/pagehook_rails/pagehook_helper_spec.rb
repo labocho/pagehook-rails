@@ -1,6 +1,6 @@
 require "spec_helper"
 
-describe PagehookRails::PagehookHelper do
+describe PagehookRails::PagehookHelper, type: "helper" do
   describe "pagehook" do
     let(:html) { helper.pagehook("articles/index", id: 123) }
     let(:node) { Nokogiri.parse(html).children.first }
