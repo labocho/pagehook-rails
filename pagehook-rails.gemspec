@@ -17,9 +17,10 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", ">= 3.1"
+  s.add_dependency "loofah", "~> 2.2.1" # avoid CVE-2018-8048
+  s.add_dependency "nokogiri", "~> 1.8.1" # avoid CVE-2017-9050
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec-rails"
-  s.add_development_dependency "nokogiri"
 end
