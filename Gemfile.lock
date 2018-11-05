@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pagehook-rails (0.0.11)
+    pagehook-rails (0.0.12)
       loofah (>= 2.2.3)
       nokogiri (~> 1.8.1)
       rails (>= 3.1)
