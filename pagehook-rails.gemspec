@@ -21,6 +21,8 @@ Gem::Specification.new do |s|
   s.add_dependency "nokogiri", ">= 1.10.4" # avoid CVE-2019-5477
   # s.add_dependency "jquery-rails"
 
-  s.add_development_dependency "sqlite3", "~> 1.4"
+  s.add_development_dependency "bootsnap"
+  s.add_development_dependency "listen"
   s.add_development_dependency "rspec-rails"
+  s.add_development_dependency "sqlite3", "~> 1.4"
 end
