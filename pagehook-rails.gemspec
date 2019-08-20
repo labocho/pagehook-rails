@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", ">= 3.1"
   s.add_dependency "loofah", ">= 2.2.3" # avoid CVE-2018-16468
-  s.add_dependency "nokogiri", "~> 1.8.1" # avoid CVE-2017-9050
+  s.add_dependency "nokogiri", ">= 1.10.4" # avoid CVE-2019-5477
   # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3", "~> 1.3.6"
