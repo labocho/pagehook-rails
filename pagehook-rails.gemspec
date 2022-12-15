@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", ">= 3.1"
+  s.add_dependency "rails", ">= 6.1"
   s.add_dependency "loofah", ">= 2.2.3" # avoid CVE-2018-16468
   s.add_dependency "nokogiri", ">= 1.10.4" # avoid CVE-2019-5477
   # s.add_dependency "jquery-rails"

@@ -3,7 +3,7 @@ module PagehookRails
     isolate_namespace PagehookRails
 
     initializer "pagehook-rails.action_controller" do |app|
-      ActiveSupport.on_load :action_controller do
+      Rails.application.reloader.to_prepare do
         ActionController::Base.helper PagehookRails::PagehookHelper
       end
     end
