@@ -11,8 +11,10 @@ module Pagehook
       case options[:lang].downcase
       when "js", "javascript"
         copy_file "pagehook_rails.js", "app/javascript/pagehook_rails.js"
+        copy_file "global.js", "app/javascript/pagehook/global.js"
       when "ts", "typescript"
         copy_file "pagehook_rails.ts", "app/javascript/pagehook_rails.ts"
+        copy_file "global.ts", "app/javascript/pagehook/global.ts"
       else
         raise "Unknown language: #{lang}"
       end
