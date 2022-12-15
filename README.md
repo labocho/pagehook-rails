@@ -15,9 +15,7 @@ And then execute:
 
     $ bundle
     $ rails g pagehook:install
-    # Or `rails g pagehook:install --lang coffee` if you like CoofeeScript
-
-If you use turbolinks, you should load `pagehook_rails` after `turbolinks` in `app/assets/javascripts/application.js`.
+    # Or `rails g pagehook:install --lang js` if you dont use TypeScript
 
 
 View helper
@@ -25,7 +23,7 @@ View helper
 
 `pagehook` view helper method generates "trigger element".
 
-    <%= pagehook("articles/index", id: 123) %>
+    <%= pagehook("articles/index", {id: 123}) %>
 
 This generates following HTML.
 
@@ -38,15 +36,14 @@ Generator
 `rails g pagehook path/to/view` generates hook definition template.
 
     $ rails g pagehook articles/index
-          create  app/assets/javascripts/pagehook/articles/index.coffee
-    $ cat app/assets/javascripts/pagehook/articles/index.coffee
-    //= require pagehook_rails
-    Pagehook.register("articles/index", function(data) {
-        // Your code
+          create  app/javascript/pagehook/articles/index.ts
+    $ cat app/javascript/pagehook/articles/index.ts
+    import Pagehook from "pagehook"
+    Pagehook.register("articles/index", (data: any) => {
+      console.log(data);
     });
 
-
-You can also do `rails g pagehook path/to/view --lang coffee` to generate .coffee rather than .js.
+You can also do `rails g pagehook path/to/view --lang js` to generate .js rather than .ts.
 
 
 Contributing
